@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chronomètre Rummy</title>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/CSS">
+  </head>
+  <body>
+    <div id="chrono" class="view">
+      <span id="player">&nbsp;</span>
+      <div class="spinner-circle-container">
+        <svg id="spinner-circle" viewBox="0 0 170 170">
+          <circle></circle>
+          <circle class="hidden"></circle>
+        </svg>
+        <span id="time" class="start"></span>
+      </div>
+      <div class="options-bar">
+        <button id="start" class="icon-start"></button>
+        <button id="pause" class="icon-pause" disabled></button>
+        <button id="restart" class="icon-restart" disabled></button>
+        <button id="players" class="icon-players"></button>
+        <button id="fullscreen" class="icon-expand"></button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

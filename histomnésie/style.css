@@ -1,0 +1,243 @@
+:root {
+	--text-color: #000;
+	--second-text-color: #b1b1b1;
+	--placeholder-color: #757575;
+	--background-color: #fff;
+}
+
+body {
+	padding: 0;
+	margin: 60px 0 0 0;
+	color: var(--text-colo);
+	font-family: calibri, sans-serif;
+	background: var(--background-color);
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 60px;
+	font-size: 2em;
+	background: var(--background-color);
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	z-index: 1;
+}
+
+.navbar div {
+	padding: 0 8px;
+}
+
+.navbar span {
+	color: var(--second-text-color);
+	font-size: 0.7em;
+	margin-left: 10px;
+}
+
+.event-form-container {
+	overflow: hidden;
+}
+
+form {
+	width: calc(100% - 100px);
+	max-width: 700px;
+	margin: 150px auto;
+	padding: 25px 50px;
+	box-sizing: border-box;
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	border-radius: 8px;
+	visibility: hidden;
+}
+
+.event-form {
+	margin: 150px auto;
+}
+
+form.exit-form {
+	animation: exit-form 0.25s ease-in-out;
+}
+
+@keyframes exit-form {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+form.entrance-form {
+	animation: entrance-form 0.25s ease-in-out;
+}
+
+@keyframes entrance-form {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+
+form h1, form > div, form p {
+	margin: 30px 0 0 0 ;
+}
+
+.input-container-form, .submit-container-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+form.answer .input-container-form,
+form.answer .submit-container-form {
+	display: none;
+}
+
+.event-form [disabled] {
+	display: none;
+}
+
+form input, form select, form button {
+	margin: 0 8px;
+	padding: 8px;
+	height: unset;
+	font: inherit;
+	font-size: 1.5em;
+	background: var(--background-color);
+	border: 1px solid #dfe1e5;
+	border-radius: 8px 10px;
+	outline: none;
+	transition: all .2s ease;
+}
+
+form input:focus, form select:focus, form button:focus, form input[type="submit"]:hover, form button:hover {
+	border-color: transparent;
+	box-shadow: 0 1px 2px rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+form select {
+	padding-right: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.select-container {
+	position: relative;
+}
+
+.select-container::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 16px;
+	top: 12px;
+	height: 20px;
+	width: 20px;
+	background: url(images/expand-more.svg);
+	pointer-events: none;
+}
+
+input::placeholder, select:invalid{
+	color: var(--placeholder-color);
+}
+
+option {
+	color: var(--text-color);
+}
+
+.input-container-form span {
+	font-size: 1.3em;
+}
+
+.submit-container-form {
+	margin-top: 21px;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+
+.submit-container-form input, .submit-container-form button {
+	margin: 0;
+}
+
+form p {
+	font-size: 1.3em;
+}
+.answer-container-form {
+	display: none;
+	margin-top: 21px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+form.answer .answer-container-form {
+	display: flex;
+}
+
+.answer-form {
+	margin: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.answer-form .wrong {
+	text-decoration: line-through #e40f0fa1;
+	color: var(--second-text-color);
+}
+
+.result-form {
+	display: none;
+	visibility: visible;
+}
+
+.circle-container {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle-container svg{
+	height: 150px;
+	width: 150px;
+	transform: rotate(90deg);
+}
+
+.circle-container svg circle {
+	fill: none;
+	stroke: #a1a1a1;
+	stroke-width: 9px;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+}
+
+.circle-container svg circle:nth-child(2) {
+	stroke: #1e90ff;
+	stroke-width: 10px;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: circle 2s paused forwards;
+	--to-stroke-dashoffset: unset;
+}
+
+@keyframes circle {
+	to {
+		stroke-dashoffset: var(--to-stroke-dashoffset);
+	}
+}
+
+.circle-container span {
+	position: absolute;
+	font-size: 3em;
+}
+
+.wrong-answers-form {
+	display: none;
+	visibility: visible;
+}

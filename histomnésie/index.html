@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Histomnésie</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="style.css">
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+	
+	<div class="navbar">
+		<div>
+			Histomnésie
+			<span>1.4.2</span>
+		</div>
+		<div class="question-number"></div>
+	</div>
+	
+	<div class="event-form-container">
+		<form class="event-form">
+			<h1 class="event-title-form"></h1>
+			<div class="input-container-form">
+				<input placeholder="jour" type="number" min="1" max="31" class="input-day" required>
+				<span class="day-separator-form">et</span>
+				<input placeholder="jour" type="number" min="1" max="31" class="input-day-2" required>
+				<label class="select-container">
+					<select class="input-month" required>
+						<option value="" disabled selected hidden>moi</option><option value="1">Janvier</option><option value="2">Février</option><option value="3">Mars</option><option value="4">Avril</option><option value="5">Mai</option><option value="6">Juin</option><option value="7">Juillet</option><option value="8">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+					</select>
+				</label>
+				<span class="month-separator-form">à</span>
+				<label class="select-container">
+					<select class="input-month-2" required>
+						<option value="" disabled selected hidden>moi</option><option value="1">Janvier</option><option value="2">Février</option><option value="3">Mars</option><option value="4">Avril</option><option value="5">Mai</option><option value="6">Juin</option><option value="7">Juillet</option><option value="8">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+					</select>
+				</label>
+				<input placeholder="année" type="number" min="-9999" max="9999" class="input-year" required>
+				<span class="year-separator-form">à</span>
+				<input placeholder="année" type="number" min="-9999" max="9999" class="input-year-2" required>
+			</div>
+			<div class="submit-container-form">
+				<input type="submit" value="Valider">
+				<button class="pass-button-form">Passer</button>
+			</div>
+			<div class="answer-container-form">
+				<div class="answer-form">
+					<div class="wrong"></div>
+					<div class="correct"></div>
+				</div>
+				<button class="next-button-form">Suivant</button>
+			</div>
+			<p class="event-info-form"></p>
+		</form>
+	</div>
+	
+	<form class="result-form">
+		<div class="circle-container">
+			<svg>
+				<circle cx="70px" cy="70px" r="70px"></circle>
+				<circle cx="70px" cy="70px" r="70px"></circle>
+			</svg>
+			<span></span>
+		</div>
+	</form>
+	
+	<form class="wrong-answers-form"></form>
+	
+	</body>
+</html>
+
+<!-- icons from https://fonts.google.com/icons -->

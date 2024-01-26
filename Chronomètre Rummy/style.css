@@ -1,0 +1,241 @@
+@font-face {
+     font-family: comfortaa;
+     src: url('images/comfortaa.ttf');
+     font-weight: normal;
+     font-style: normal;
+}
+
+:root {
+  --main-color: #5268ff;
+  --main-color-transparent: #5268ffa6;
+  --error-color: #ff4d4d;
+  --text-color: #484844;
+  --background-color: #fffdf0;
+  --second-background-color: #e8ebed;
+  --border-radius: 5px;
+  --player-1-color: #ddcf47;
+  --player-2-color: #31b0dd;
+  --player-3-color: #d46c7d;
+  --player-4-color: #83ee5f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: comfortaa;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.view {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view > * {
+  margin: 20px 0 20px 0;
+}
+
+input{
+  background: var(--second-background-color);
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: all .5s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 0 4px var(--main-color-transparent);
+}
+
+#player {
+  font-size: xx-large;
+}
+
+.options-bar {
+  display: flex;
+}
+
+.options-bar button {
+  height: 50px;
+  width: 50px;
+  background-color: var(--second-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+.options-bar button:disabled {
+  display: none;
+}
+
+.icon-compress {
+  background-image: url('images/compress.svg');
+}
+
+.icon-expand {
+  background-image: url('images/expand.svg');
+}
+
+.icon-hourglass {
+  background-image: url('images/hourglass.svg');
+}
+
+.icon-hourglass-half {
+  background-image: url('images/hourglass-half.svg');
+}
+
+.icon-hourglass-end {
+  background-image: url('images/hourglass-end.svg');
+}
+
+.icon-mute {
+  background-image: url('images/mute.svg');
+}
+
+.icon-pause {
+  background-image: url('images/pause.svg');
+}
+
+.icon-start {
+  background-image: url('images/start.svg');
+}
+
+.icon-restart {
+  background-image: url('images/restart.svg');
+}
+
+.icon-players[value="2"] {
+  background-image: url('images/player-2.svg');
+}
+
+.icon-players[value="3"] {
+  background-image: url('images/player-3.svg');
+}
+
+.icon-players[value="4"] {
+  background-image: url('images/player-4.svg');
+}
+
+.animated-hourglass {
+  background-image: url('images/hourglass.svg');
+  animation: flip 0.5s;
+}
+
+.spinner-circle-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#time {
+  font-size: 100px;
+  position: absolute;
+}
+
+#time.start {
+  height: 100px;
+  width: 100px;
+  background: url('images/start.svg') no-repeat;
+  background-position: center;
+}
+
+#spinner-circle {
+  max-width: 300px;
+  height: 100%;
+  animation: spin 10s infinite linear paused;
+}
+
+#spinner-circle.animed {
+  animation-play-state: running;
+}
+
+#spinner-circle.not-animed, #spinner-circle.finish {
+  animation: none;
+}
+
+#spinner-circle circle {
+  fill: transparent;
+  r: 80px;
+  cx: 85px;
+  cy: 85px;
+}
+
+#spinner-circle circle.hidden {
+  visibility: hidden;
+}
+
+#spinner-circle circle:first-child {
+  stroke-width: 10;
+  stroke: var(--second-background-color);
+}
+
+#spinner-circle.finish circle:first-child {
+  animation: red-alert 1s infinite alternate linear;
+}
+
+#spinner-circle circle:last-child {
+  stroke-dasharray: 502.655;
+  stroke-dashoffset: 503;
+  stroke-width: 10;
+  stroke: var(--player-1-color);
+  stroke-linecap: round;
+  animation: progress linear paused;
+}
+
+#spinner-circle.animed circle:last-child {
+  animation-play-state: running;
+}
+
+#spinner-circle.not-animed circle:last-child {
+  animation: none;
+}
+
+#spinner-circle.finish circle:last-child {
+  visibility: hidden;
+}
+
+@keyframes flip {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 503;
+  }
+}
+
+@keyframes red-alert {
+  from {
+    stroke: var(--second-background-color);
+  }
+  to {
+    stroke: var(--error-color);
+  }
+}

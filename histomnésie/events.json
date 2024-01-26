@@ -1,0 +1,271 @@
+[
+	{
+		"type": "year",
+		"date": "1922",
+		"name": "Création de l'URSS"
+	},{
+		"type": "two-years",
+		"date": "1929/1953",
+		"name": "Staline au pouvoir"
+	},{
+		"type": "two-years",
+		"date": "1936/1938",
+		"name": "Grands procès de Moscou"
+	},{
+		"type": "two-years",
+		"date": "1933/1945",
+		"name": "Hitler au pouvoir"
+	},{
+		"type": "year",
+		"date": "1943",
+		"name": "Révolte des Juifs dans les ghettos"
+	},{
+		"type": "year",
+		"date": "1933",
+		"name": "Camps de concentration"
+	},{
+		"type": "date",
+		"date": "15_09_1935",
+		"name": "Lois de Nuremberg"
+	},{
+		"type": "year",
+		"date": "1923",
+		"name": "Putsch"
+	},{
+		"type": "year",
+		"date": "1936",
+		"name": "Lois sociales su Front Populaire (France)"
+	},{
+		"type": "date",
+		"date": "08_06_1936",
+		"name": "Accords de Matignon"
+	},{
+		"type": "date",
+		"date": "12_03_1938",
+		"name": "Annexion de l'Autriche par Hitler"
+	},{
+		"type": "date",
+		"date": "03_09_1939",
+		"name": "Déclaration de guerre de la France et du Royaume-Uni contre l'Allemagne 2GM"
+	},{
+		"type": "date",
+		"date": "01_09_1939",
+		"name": "Invasion de la Pologne par Hitler"
+	},{
+		"type": "two-months",
+		"date": "05/06_1940",
+		"name": "Invasion de la France par Hitler"
+	},{
+		"type": "date",
+		"date": "07_12_1941",
+		"name": "Attaque de Pearl Harbor"
+	},{
+		"type": "date",
+		"date": "30_01_1933",
+		"name": "Hitler nommé chancelier"
+	},{
+		"type": "date",
+		"date": "06_06_1944",
+		"name": "Débarquement en Normandie"
+	},{
+		"type": "date",
+		"date": "15_08_1944",
+		"name": "Débarquement en Provence"
+	},{
+		"type": "date",
+		"date": "08_05_1945",
+		"name": "Capitulation allemande"
+	},{
+		"type": "two-days",
+		"date": "06/09_08_1945",
+		"name": "Bombes atomiques sur Hiroshima et Nagasaki"
+	},{
+		"type": "date",
+		"date": "02_09_1945",
+		"name": "Capitulation japonaise"
+	},{
+		"type": "two-years",
+		"date": "1940/1944",
+		"name": "L'Occupation"
+	},{
+		"type": "date",
+		"date": "14_06_1940",
+		"name": "Entré des Allemands dans Paris"
+	},{
+		"type": "date",
+		"date": "16_06_1940",
+		"name": "Maréchal Pétain chef du gouvernement"
+	},{
+		"type": "date",
+		"date": "18_06_1940",
+		"name": "Appel de Charles de Gaulle"
+	},{
+		"type": "date",
+		"date": "22_06_1940",
+		"name": "Signature de l'Armistice 2GM"
+	},{
+		"type": "date",
+		"date": "10_07_1940",
+		"name": "Pleins pouvoir au maréchal Pétain"
+	},{
+		"type": "date",
+		"date": "03_10_1940",
+		"name": "Statut des Juifs"
+	},{
+		"type": "date",
+		"date": "24_10_1940",
+		"name": "Entrevue de Montoire"
+	},{
+		"type": "two-days",
+		"date": "16/17_07_1942",
+		"name": "Rafle du Vélodrome d'Hiver"
+	},{
+		"type": "year",
+		"date": "1943",
+		"name": "Création du STO"
+	},{
+		"type": "year",
+		"date": "1943",
+		"name": "Création de la Milice"
+	},{
+		"type": "date",
+		"date": "25_08_1944",
+		"name": "Libération de Paris"
+	},{
+		"type": "two-years",
+		"date": "1914/1918",
+		"name": "Première guerre mondial"
+	},{
+		"type": "year",
+		"date": "1915",
+		"name": "Génocide arménien"
+	},{
+		"type": "date",
+		"date": "21_02_1916",
+		"name": "Début de la bataille de Verdun"
+	},{
+		"type": "date",
+		"date": "18_12_1916",
+		"name": "Fin de la bataille de Verdun"
+	},{
+		"type": "year",
+		"date": "1917",
+		"name": "Grandes mutineries"
+	},{
+		"type": "two-months",
+		"date": "02/10_1917",
+		"name": "Révolutions ruses"
+	},{
+		"type": "date",
+		"date": "11_11_1918",
+		"name": "Signature de l'Armistice 1GM"
+	},{
+		"type": "date",
+		"date": "28_06_1919",
+		"name": "Traité de Versailles"
+	},{
+		"type": "year",
+		"date": "1945",
+		"name": "Création de l'ONU"
+	},{
+		"type": "two-years",
+		"date": "1947/1991",
+		"name": "Guerre froide"
+	},{
+		"type": "two-years",
+		"date": "1948/1949",
+		"name": "Blocus de Berlin"
+	},{
+		"type": "year",
+		"date": "1949",
+		"name": "Création des deux Allemagne (RFA et RDA)"
+	},{
+		"type": "two-years",
+		"date": "1961/1989",
+		"name": "Mur de Berlin"
+	},{
+		"type": "date",
+		"date": "25_12_1991",
+		"name": "Éclatement de l'URSS"
+	},{
+		"type": "two-years",
+		"date": "1947/1962",
+		"name": "Principal phase de la décolonisation"
+	},{
+		"type": "year",
+		"date": "1947",
+		"name": "Indépendance de l'Inde"
+	},{
+		"type": "year",
+		"date": "1962",
+		"name": "Indépendance de l'Algérie"
+	},{
+		"type": "year",
+		"date": "1957",
+		"name": "Traité de Rome : création de la Communauté économique européenne (CEE)"
+	},{
+		"type": "year",
+		"date": "1992",
+		"name": "Traité de Maastricht: création de l'Union Européenne (UE)"
+	},{
+		"type": "year",
+		"date": "2002",
+		"name": "€ mis en circulations"
+	},{
+		"type": "date",
+		"date": "11_09_2001",
+		"name": "Attentats des tours jumelles"
+	},{
+		"type": "year",
+		"date": "2003",
+		"name": "Intervention Américaine en Irak"
+	},{
+		"type": "year",
+		"date": "2011",
+		"name": "Début de la révolutions du Printemps arabe"
+	},{
+		"type": "date",
+		"date": "29_03_2017",
+		"name": "Brexit"
+	},{
+		"type": "date",
+		"date": "24_02_2022",
+		"name": "Invasion russe en Ukraine"
+	},{
+		"type": "two-years",
+		"date": "1789/1799",
+		"name": "Révolution Française"
+	},{
+		"type": "month",
+		"date": "08_1789",
+		"name": "Déclaration des Droits de l'Homme et du Citoyen (DDHC)"
+	},{
+		"type": "year",
+		"date": "1905",
+		"name": "République laïque"
+	},{
+		"type": "year",
+		"date": "1958",
+		"name": "5ème République"
+	},{
+		"type": "year",
+		"date": "1946",
+		"name": "4ème République"
+	},{
+		"type": "year",
+		"date": "1962",
+		"name": "Élection du Président au suffrage universel direct"
+	},{
+		"type": "year",
+		"date": "1944",
+		"name": "Droit de vote des femmes"
+	},{
+		"type": "year",
+		"date": "1945",
+		"name": "Sécurité sociale en France"
+	},{
+		"type": "year",
+		"date": "1975",
+		"name": "Avortement, Loi Veil"
+	}
+]
