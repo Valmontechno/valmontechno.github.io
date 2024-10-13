@@ -1,0 +1,51 @@
+[
+	{
+		"type": "date",
+		"date": "09_11_1799",
+		"name": "Coup d'état de Napoléon Bonaparte"
+	},{
+		"type": "year",
+		"date": "1802",
+		"name": "Napoléon Bonaparte consul à vie"
+	},{
+		"type": "year",
+		"date": "1804",
+		"name": "Napoléon Ier Empereur des français"
+	},{
+		"type": "year",
+		"date": "1805",
+		"name": "Victoire d'Austerlitz"
+	},{
+		"type": "year",
+		"date": "1806",
+		"name": "Victoire d'Iéna"
+	},{
+		"type": "year",
+		"date": "1804",
+		"name": "Code civil"
+	},{
+		"type": "year",
+		"date": "1811",
+		"name": "Apogée de l'Empire"
+	},{
+		"type": "year",
+		"date": "1808",
+		"name": "Guérilla pendant la guerre d'indépendance espagnole"
+	},{
+		"type": "year",
+		"date": "1812",
+		"name": "Retraite de Russie"
+	},{
+		"type": "year",
+		"date": "1813",
+		"name": "Défaite de Leipzig"
+	},{
+		"type": "year",
+		"date": "1814",
+		"name": "Abdication de Napoléon Ier"
+	},{
+		"type": "year",
+		"date": "1815",
+		"name": "Détaite de Waterloo"
+	}
+]
