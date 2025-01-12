@@ -1,0 +1,51 @@
+[
+    {
+        "question": "Quelle est ton activité préférée ?",
+        "answers": [
+            { "label": "Voyager", "score": [["hermes", 1]] },
+            { "label": "Faire la fête", "score": [["dionysos", 1]] },
+            { "label": "Travailler", "score": [["hephaistos", 1]] },
+            { "label": "Une activité artistique", "score": [["apollon", 1]] }
+        ]
+    },{
+        "question": "Quelle est ta principale qualité ?",
+        "answers": [
+            { "label": "La sagesse", "score": [["athena", 1]] },
+            { "label": "Le leadership", "score": [["zeus", 1], ["athena", 1], ["ares", 1]] },
+            { "label": "L'honnêteté", "score": [] },
+            { "label": "L'hospitalité", "score": [["hestia", 1]] }
+        ]
+    },{
+        "question": "Quel est ton principal défaut ?",
+        "answers": [
+            { "label": "La rancune", "score": [["hera", 1], ["poseidon", 1]] },
+            { "label": "La jalousie", "score": [["hera", 1], ["aphrodite", 1]] },
+            { "label": "L'infidélité", "score": [["zeus", 1]] },
+            { "label": "Le narcissisme", "score": [["aphrodite", 1]] }
+        ]
+    },{
+        "question": "Où préfères-tu voyager ?",
+        "answers": [
+            { "label": "À la montagne", "score": [["hephaistos", 1], ["hermes", 1]] },
+            { "label": "En forêt", "score": [["artemis", 1], ["hermes", 1]] },
+            { "label": "À la mer", "score": [["poseidon", 1], ["hermes", 1]] },
+            { "label": "Je préfère rester chez moi", "score": [] }
+        ]
+    },{
+        "question": "Quel est ton élément préféré ?",
+        "answers": [
+            { "label": "Le feu", "score": [["hephaistos", 1], ["hestia", 1]] },
+            { "label": "L'eau", "score": [["poseidon", 1]] },
+            { "label": "La terre", "score": [["demeter", 1]] },
+            { "label": "L'air", "score": [["zeus", 1]] }
+        ]
+    },{
+        "question": "Quel est ton animal préféré ?",
+        "answers": [
+            { "label": "Le chien", "score": [["artemis", 1]] },
+            { "label": "Le hibou", "score": [["athena", 1]] },
+            { "label": "Le cheval", "score": [["poseidon", 1]] },
+            { "label": "Le paon", "score": [["hera", 1]] }
+        ]
+    }
+]

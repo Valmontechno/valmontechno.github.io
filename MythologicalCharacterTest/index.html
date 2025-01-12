@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quel personnage mythologique es-tu ?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="home">
+            <h1>Quel personnage mythologique es-tu&nbsp?</h1>
+            <h4>Réponds à quelques questions pour découvrir le personnage mythologique qui te correspond le plus&nbsp!</h4>
+            <p  class="centered">
+                <button class="start-button neon-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Commencer
+                </button>
+            </p>
+            <footer>
+                <a class="credits-button" data-credits="jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license">Crédits</a>
+            </footer>
+        </div>
+        <div class="quiz" style="display: none;">
+            <h2 class="question"></h2>
+            <div class="answers"></div>
+        </div>
+        <div class="result" style="display: none;">
+            <h1 class="character-name">
+                <span class="character-greek-name" data-culture="grec"></span>
+                <i>-</i>
+                <span class="character-roman-name" data-culture="romain"></span>
+            </h1>
+            <p class="character-description"></p>
+            <p class="centered"><img class="character-image"></p>
+            <p class="centered"><button class="restart-button">Recommencer</button></p>
+        </div>
+    </div>
+</body>
+</html>
