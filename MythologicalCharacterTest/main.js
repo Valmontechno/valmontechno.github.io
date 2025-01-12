@@ -21,6 +21,15 @@ $(document).ready(() => {
     });
 });
 
+const answerSounds = [
+    new Audio('sounds/Collect_Boxy_3.wav'),
+    new Audio('sounds/Collect_Boxy_1.wav'),
+    new Audio('sounds/Collect_Boxy_2.wav'),
+    new Audio('sounds/Collect_Pop_2.wav')
+];
+
+const resultSound = new Audio('Success_9.wav');
+
 var questionOrder = []
 var scores = {};
 
@@ -68,12 +77,14 @@ function askQuestion(questionIndex) {
 
         answersDiv.empty();
         question.answers = question.answers.sort(() => Math.random() - 0.5);
-        question.answers.forEach((answer) => {
+        question.answers.forEach((answer, answerIndex) => {
             const button = $('<button></button>');
             button.text(answer.label);
             button.click(() => {
                 container.addClass('disabled');
                 button.addClass('clicked');
+                answerSounds[answerIndex].play();
+                console.log(answerSounds[answerIndex]);
                 setTimeout(() => {
                     onAnswer(answer)
                 }, 1000);
@@ -86,7 +97,6 @@ function askQuestion(questionIndex) {
 }
 
 function onAnswer(answer) {
-    console.log('Answer');
     answer.score.forEach(character => {
         scores[character[0]] = (scores[character[0]] || 0) + character[1];
     });
@@ -104,6 +114,7 @@ function result() {
 
     fadeOut($('.quiz'), () => {
         container.addClass('maximized');
+        resultSound.play();
         $('.result').fadeIn(2000, () => {
             container.removeClass('disabled');
         });
