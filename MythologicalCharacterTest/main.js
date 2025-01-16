@@ -12,6 +12,7 @@ $(document).ready(() => {
     $.when(questionsRequest, charactersRequest).done((questionsData, charactersData) => {
         questions = questionsData[0];
         characters = charactersData[0];
+        init();
         
         $('.start-button').click(start);
         $('.restart-button').click(restart);
@@ -28,7 +29,7 @@ const answerSounds = [
     new Audio('sounds/Collect_Pop_2.wav')
 ];
 
-const resultSound = new Audio('Success_9.wav');
+const resultSound = new Audio('sounds/Success_9.wav');
 
 var questionOrder = []
 var scores = {};
@@ -47,6 +48,21 @@ function fadeOut(element, callback) {
     });
 }
 
+function init() {
+    questions.forEach(question => {
+        const localScoreMax = {}
+        question.answers.forEach(answer => {
+            answer.score.forEach(character => {
+                localScoreMax[character[0]] = Math.max(localScoreMax[character[0]] || 0, character[1]);
+            });
+        });
+        Object.entries(localScoreMax).forEach(([character, scoreMax]) => {
+            characters[character] = characters[character] || {};
+            characters[character].scoreMax = (characters[character]?.scoreMax || 0) + scoreMax;
+        });
+    });
+}
+
 function start() {
     fadeOut($('.home'), () => {
 
@@ -56,6 +72,7 @@ function start() {
 
         questionOrder = Array.from({length: questions.length}, (_, i) => i);
         questionOrder = questionOrder.sort(() => Math.random() - 0.5);
+        scores = {};
     
         nextQuestion();
     });
@@ -84,7 +101,6 @@ function askQuestion(questionIndex) {
                 container.addClass('disabled');
                 button.addClass('clicked');
                 answerSounds[answerIndex].play();
-                console.log(answerSounds[answerIndex]);
                 setTimeout(() => {
                     onAnswer(answer)
                 }, 1000);
@@ -107,8 +123,8 @@ function result() {
     const characterId = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
     const character = characters[characterId];
     
-    $('.character-greek-name').text(character?.['greek-name'] || characterId);
-    $('.character-roman-name').text(character?.['roman-name'] || characterId);
+    $('.character-greek-name').text(character?.greekName || characterId);
+    $('.character-roman-name').text(character?.romanName || characterId);
     $('.character-description').text(character?.description || 'Description.');
     $('.character-image').attr('src', character?.image || 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png');
 
@@ -120,6 +136,8 @@ function result() {
         });
     });
     
+    alert(scores[characterId] / character.scoreMax * 100 + ' %');
+    console.log(scores[characterId], character);
 }
 
 function restart() {
