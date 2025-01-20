@@ -23,7 +23,7 @@
                 </button>
             </p>
             <footer>
-                <a class="credits-button" data-credits="jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license">Crédits</a>
+                <a class="credits-button">Crédits</a>
             </footer>
         </div>
         <div class="quiz" style="display: none;">
@@ -31,13 +31,19 @@
             <div class="answers"></div>
         </div>
         <div class="result" style="display: none;">
-            <h1 class="character-name">
-                <span class="character-greek-name" data-culture="grec"></span>
-                <i>-</i>
-                <span class="character-roman-name" data-culture="romain"></span>
-            </h1>
-            <p class="character-description"></p>
-            <p class="centered"><img class="character-image"></p>
+            <div class="progress">
+                <span class="progress-indicator"></span>
+                <div class="progress-bar"><span></span></div>
+            </div>
+            <div class="character" style="opacity: 0;">
+                <h1 class="character-name">
+                    <span class="character-greek-name" data-culture="grec"></span>
+                    <i>-</i>
+                    <span class="character-roman-name" data-culture="romain"></span>
+                </h1>
+                <p class="character-description"></p>
+                <p class="centered"><img class="character-image"></p>
+            </div>
             <p class="centered"><button class="restart-button">Recommencer</button></p>
         </div>
     </div>

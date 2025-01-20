@@ -151,6 +151,34 @@ footer {
     }
 }
 
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-indicator {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+    background: var(--discreet-color);
+    height: 1.1rem;
+    width: 15rem;
+    border-radius: 0.55rem;
+    box-shadow: inset 1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar span {
+    position: absolute;
+    background: var(--primary-color);
+    height: 100%;
+}
+
 .character-name {
     text-align: center;
     padding-bottom: 1rem;
@@ -180,6 +208,7 @@ footer {
 
 .character-description {
     line-height: 1.25rem;
+    margin: 2rem 2rem;
 }
 
 .character-image {
