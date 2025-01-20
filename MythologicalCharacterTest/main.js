@@ -104,7 +104,7 @@ function start() {
 }
 
 function nextQuestion() {
-    if (questionOrder.length > 5) { // 0
+    if (questionOrder.length > 0) {
         askQuestion(questionOrder.shift());
     } else {
         result();
