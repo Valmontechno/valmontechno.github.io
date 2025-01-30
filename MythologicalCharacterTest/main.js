@@ -1,7 +1,9 @@
 const credits = `\
 jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license
 
-UI Audio Collection for Unity devsdaddy.itch.io/ui-audio-collection-for-unity`
+UI Audio Collection for Unity devsdaddy.itch.io/ui-audio-collection-for-unity
+
+Images via Wikimedia Commons`
 
 const questionsRequest = $.getJSON('questions.json');
 const charactersRequest = $.getJSON('characters.json');
@@ -98,7 +100,7 @@ function start() {
         questionOrder = Array.from({length: questions.length}, (_, i) => i);
         questionOrder = questionOrder.sort(() => Math.random() - 0.5);
         scores = {};
-    
+
         nextQuestion();
     });
 }
@@ -125,7 +127,7 @@ function askQuestion(questionIndex) {
             button.click(() => {
                 container.addClass('disabled');
                 button.addClass('clicked');
-                answerSounds[answerIndex].play();
+                answerSounds[answerIndex % 4].play();
                 setTimeout(() => {
                     onAnswer(answer)
                 }, 1000);
@@ -145,16 +147,28 @@ function onAnswer(answer) {
 }
 
 function result() {
-    const characterId = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+    const matchs = []
+    for (let id in scores) {
+        matchs.push([
+            id,
+            Math.ceil(Math.pow(scores[id] / characters[id].scoreMax, 0.7) * 100),
+            scores[id] / characters[id].scoreMax * 100
+        ]);
+    }
+    matchs.sort((a, b) => b[1] - a[1]);
+    console.log(matchs);
+
+    const characterId = matchs[0][0];
+    const match = matchs[0][1]
     const character = characters[characterId];
+
+    console.log(match);
     
     $('.character-greek-name').text(character?.greekName || characterId);
     $('.character-roman-name').text(character?.romanName || characterId);
     $('.character-description').text(character?.description || 'Description.');
-    $('.character-image').attr('src', character?.image || 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png');
-
-    
-    const match = scores[characterId] / character.scoreMax * 100
+    $('.character-image').attr('src', character?.image || 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg')
+                         .attr('title', character?.imageCredit);
 
     $('.progress-indicator').text('0 %');
     $('.progress-bar span').css('width', '0%');

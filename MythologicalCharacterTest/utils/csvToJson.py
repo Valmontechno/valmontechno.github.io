@@ -16,7 +16,12 @@ greekToId = {}
 charactersData = {}
 questionsData = []
 
-for greekName, romanName, occurrence, functions, attributes, description, image in charactersTable:
+# for row in charactersTable:
+#     print(row[0], len(row))
+#     print(row)
+#     print()
+
+for greekName, romanName, occurrence, functions, attributes, description, image, imageCredit in charactersTable:
     id = ''.join([char for char in unicodedata.normalize('NFKD', greekName) if not unicodedata.combining(char)])
     id = id.lower().replace(' ', '-')
 
@@ -26,7 +31,8 @@ for greekName, romanName, occurrence, functions, attributes, description, image 
         'greekName': greekName,
         'romanName': romanName,
         'description': description,
-        'image': image
+        'image': image,
+        'imageCredit': imageCredit
     }
 
 for row in questionTable:
