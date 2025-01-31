@@ -1,0 +1,317 @@
+:root {
+    --bg-color: #f4f0e6;
+    --primary-text-color: #4b3832;
+    --secondary-text-color: #fff;
+    --primary-color: #c19a6b;
+    --secondary-color: #a67b5b;
+    --tertiary-color: #8b5e3c;
+    --discreet-color: #d3bdac;
+}
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--bg-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+}
+
+.container.disabled {
+    pointer-events: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered > button {
+    margin-top: 1rem;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-variant: small-caps;
+    color: var(--primary-color);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    --button-color: var(--primary-color);
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Garamond', serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    --button-color: var(--secondary-color);
+}
+
+button.clicked {
+    animation: clickAnimation 1.1s forwards;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+        background-color: var(--tertiary-color);
+    }
+    50% {
+        transform: scale(0.95);
+        background-color: var(--primary-color);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        background-color: var(--tertiary-color);
+    }
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+a:active {
+    color: var(--secondary-color);
+}
+
+footer {
+    position: absolute;
+    bottom: .5rem;
+    left: 1rem;
+    font-size: .9rem;
+}
+
+.quiz .answers {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    --answers-gap: 10px;
+    gap: var(--answers-gap);
+    margin-top: 5ch;
+}
+
+.quiz .answers button {
+    min-height: 80px;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 1.2em;
+    }
+
+    .container {
+        height: 80%;
+    }
+
+    .container.maximized {
+        height: unset;
+    }
+
+    .quiz .answers {
+        flex-flow: wrap;
+        --answers-gap: 15px;
+    }
+
+    .quiz .answers button {
+        flex: 1 1 calc(50% - var(--answers-gap));
+        max-width: calc(50% - var(--answers-gap));
+    }
+
+    .quiz .answers:has(button:nth-child(3)):not(:has(button:nth-child(4))) > button {
+        flex: 1 1 calc(100% / 3 - var(--answers-gap));
+    }
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-indicator {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+    background: var(--discreet-color);
+    height: 1.1rem;
+    width: 15rem;
+    border-radius: 0.55rem;
+    box-shadow: inset 1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar span {
+    position: absolute;
+    background: var(--primary-color);
+    height: 100%;
+}
+
+.character-name {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.character-name i {
+    font-style: normal;
+    color: var(--discreet-color);
+    text-shadow: none;
+}
+
+.character-name span {
+    position: relative;
+}
+
+.character-name span::after {
+    content: attr(data-culture);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1em;
+    font-size: 1.1rem;
+    color: var(--discreet-color);
+    font-variant: normal;
+    text-shadow: none;
+}
+
+.character-description {
+    line-height: 1.25rem;
+    margin: 2rem 10%;
+}
+
+.character-image {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(min(100vmin - 2rem, 400px));
+    border: 5px solid var(--primary-color);
+    padding: 10px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--primary-color),
+        var(--primary-color) 10px,
+        var(--secondary-color) 10px,
+        var(--secondary-color) 20px
+    );
+}
+
+.restart-button {
+    box-shadow: none;
+}
+
+.neon-button {
+    position: relative;
+    overflow: hidden;
+    --neon-width: 0.2rem;
+    --neon-speed: 2;
+}
+
+.neon-button span {
+    position: absolute;
+}
+
+.neon-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--neon-width);
+    background: linear-gradient(90deg, var(--button-color), var(--tertiary-color));
+    animation: neon-animation-1 calc(1s * var(--neon-speed)) linear infinite;
+}
+
+@keyframes neon-animation-1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.neon-button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: var(--neon-width);
+    height: 100%;
+    background: linear-gradient(180deg, var(--button-color), var(--tertiary-color));
+    animation: neon-animation-2 calc(1s * var(--neon-speed)) linear infinite;
+    animation-delay: calc(.25s * var(--neon-speed));
+}
+
+@keyframes neon-animation-2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.neon-button span:nth-child(3) {
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: var(--neon-width);
+    background: linear-gradient(270deg, var(--button-color), var(--tertiary-color));
+    animation: neon-animation-3 calc(1s * var(--neon-speed)) linear infinite;
+    animation-delay: calc(.5s * var(--neon-speed));
+}
+
+@keyframes neon-animation-3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.neon-button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: var(--neon-width);
+    height: 100%;
+    background: linear-gradient(360deg, var(--button-color), var(--tertiary-color));
+    animation: neon-animation-4 calc(1s * var(--neon-speed)) linear infinite;
+    animation-delay: calc(.75s * var(--neon-speed));
+}
+
+@keyframes neon-animation-4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
