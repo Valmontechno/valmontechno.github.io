@@ -1,9 +1,12 @@
 const credits = `\
-jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license
+Développé par Valmontechno :)
+github.com/valmontechno
+
+Images via Wikimedia Commons
 
 UI Audio Collection for Unity devsdaddy.itch.io/ui-audio-collection-for-unity
 
-Images via Wikimedia Commons`
+jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license`
 
 const questionsRequest = $.getJSON('questions.json');
 const charactersRequest = $.getJSON('characters.json');
@@ -24,6 +27,7 @@ $(document).ready(() => {
         $('.start-button').click(start);
         $('.restart-button').click(restart);
         $('.credits-button').click(e => {
+            answerSounds[3].play();
             alert(credits);
         });
     });
@@ -123,7 +127,7 @@ function askQuestion(questionIndex) {
         question.answers = question.answers.sort(() => Math.random() - 0.5);
         question.answers.forEach((answer, answerIndex) => {
             const button = $('<button></button>');
-            button.text(answer.label);
+            button.html(answer.label);
             button.click(() => {
                 container.addClass('disabled');
                 button.addClass('clicked');
